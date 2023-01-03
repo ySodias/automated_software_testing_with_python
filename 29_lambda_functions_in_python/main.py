@@ -20,3 +20,12 @@ d = list(map(lambda x: x * 2, sequence))
 
 print(doubled)
 print(d)
+
+"""
+    output terminal:
+    
+    12
+    [2, 6, 10, 18]
+    [2, 6, 10, 18]
+
+"""
