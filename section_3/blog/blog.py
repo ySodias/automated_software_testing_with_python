@@ -1,3 +1,6 @@
+from section_3.blog.post import Post
+
+
 class Blog:
     def __init__(self, title, author):
         self.title = title
@@ -5,10 +8,14 @@ class Blog:
         self.posts = []
 
     def __repr__(self):
-        pass
+        return f"<Blog({self.title}, {self.author}, {self.posts})"
 
-    def create_post(self, title, content):
-        pass
+    def create_post(self, **kwargs):
+        self.posts.append(Post(title=kwargs.get('title'), content=kwargs.get('content')))
 
     def json(self):
-        pass
+        return {
+            'title': self.title,
+            'author': self.author,
+            'posts': [post.json() for post in self.posts]
+        }
