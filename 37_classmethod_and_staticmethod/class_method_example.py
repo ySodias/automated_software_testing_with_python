@@ -18,7 +18,7 @@ class Book:
         :param page_weight:
         :return:
         """
-        return Book(name, Book.TYPES[0], page_weight + 100)
+        return cls(name, Book.TYPES[0], page_weight + 100)
 
     @classmethod
     def paperback(cls, name, page_weight):
@@ -29,7 +29,7 @@ class Book:
         :param page_weight:
         :return:
         """
-        return Book(name, Book.TYPES[1], page_weight + 100)
+        return cls(name, Book.TYPES[1], page_weight + 100)
 
 
 book = Book.hardcover("Cronicas de Narnia", 300)
