@@ -1,5 +1,5 @@
-from models.item import ItemModel
-from tests.base_test import BaseTest
+from section_6.starter_code.models.item import ItemModel
+from section_6.starter_code.tests.base_test import BaseTest
 
 
 class ItemTest(BaseTest):
